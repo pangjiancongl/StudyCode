@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let p =new Promise(function (resolve,reject){
+        //成功把结果传给resolve
+        //失败把结果传给reject
+        let flag=false;
+        if(flag){
+            resolve('正确')
+        }else {
+            reject('失败')
+        }
+    })
+    //p.then(成功时的回调，失败时的回调)
+    //成功时返回的结果
+    p.then(
+        function (data){
+            console.log(data)
+        }
+    ).catch(function (err){
+        //失败时返回的结果
+        console.log(err)
+    }).finally(function (){
+        //无论失败成功都会执行
+        console.log('我完成了')
+    })
+</script>
+</body>
+</html>

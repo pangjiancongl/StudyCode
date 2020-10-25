@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-color="msg">
+  </div>
+  <script src="./lib/vue-3.0.js"></script>
+  <script>
+    let app = Vue.createApp({
+      data() {
+        return {
+          msg: {
+            color: "blue"
+          }
+        }
+      }
+    })
+    // 注册一个全局自定义指令 `v-color`
+    app.directive('color', {
+      //binding.value是msg
+      mounted(el, binding) {
+        el.focus();
+        // console.log(binding);
+        el.style.backgroundColor = binding.value.color;
+      }
+    })
+
+    app.mount("#app");
+  </script>
+</body>
+
+</html>

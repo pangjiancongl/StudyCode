@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{msg}}
+    <hell></hell>
+</div>
+
+<script src="lib/vue-3.0.js"></script>
+<script>
+    let vm = Vue.createApp({
+        data() {
+            return {
+                msg: '111',
+            }
+        }
+    });
+    //全局组件
+    vm.component('hell', {
+        data() {
+            return {
+                a: '222',
+            }
+        },
+        methods() {
+
+        },
+        template: '<span>{{a}}</span>',
+    })
+    vm.mount('#app')
+</script>
+</body>
+</html>

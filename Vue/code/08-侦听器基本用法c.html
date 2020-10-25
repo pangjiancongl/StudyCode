@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <span>名：</span>
+      <span>
+        <input type="text" v-model='firstName'>
+      </span>
+    </div>
+    <div>
+      <span>姓：</span>
+      <span>
+        <input type="text" v-model='lastName'>
+      </span>
+    </div>
+    <div v-text="fullName"></div>
+  </div>
+  <script type="text/javascript" src="./lib/vue-3.0.js"></script>
+  <script type="text/javascript">
+    /*
+      侦听器
+    */
+    let vm =Vue.createApp({
+      data(){
+        return{
+          firstName: 'Jim',
+          lastName: 'Green',
+          fullName: 'Jim Green'
+        }
+      },
+      //侦听器
+      watch: {
+        //newValue :新值
+        //oldValue ：旧值
+        //必须要先在data里面定义
+        //执行效率：computed>watch>methods
+        lastName: function(newValue,oldValue) {
+          this.fullName = this.firstName+newValue;
+        }
+
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{msg}}
+    <father></father>
+</div>
+
+<script src="lib/vue-3.0.js"></script>
+<script>
+
+    let vm = Vue.createApp({});
+    //全局组件
+    vm.component('father', {
+        data() {
+            return {
+                a: '222',
+                b: 6,
+            }
+        },
+        //在son组件的身上定义一个属性content (可以传多个值)
+        template: '<span><son :content="a" :c="b"></son></span>',
+    })
+    vm.component('son', {
+        //在props声明一下content属性 （在father中定义的属性都要props里面声明一下才可以使用）
+        props: ['content', 'c'],
+        data() {
+            return {}
+        },
+
+        template: '<span>-----{{content}}----{{typeof c}}</span>',
+    })
+    vm.mount('#app')
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .current{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+<script src="lib/vue-3.0.js"></script>
+<div id="app">
+    <toubu :list="list">
+<!--        接受下面传的item 一般使用slotProps-->
+        <template v-slot="slotProps">
+<!--            判断id是否为2然后分别在下面两个标签显示name-->
+            <strong v-if="slotProps.info.id==2" class="current">
+                {{slotProps.info.name}}
+            </strong>
+            <span v-else>
+                {{slotProps.info.name}}
+            </span>
+        </template>
+    </toubu>
+</div>
+<script>
+    let vm=Vue.createApp({
+        data(){
+            return{
+                //定义数据
+                list:[
+                    {
+                        id:1,
+                        name:'apple'
+                    },
+                    {
+                        id:2,
+                        name:'orange'
+                    },
+                    {
+                        id:3,
+                        name:'banana'
+                    }
+                ]
+            }
+        }
+    })
+    //模板
+    vm.component('toubu',{
+        //接受根目录传的数据
+        props:['list'],
+        //定义模板
+        // 把值传到html里面的template标签里面通过info
+        template:`
+            <ul >
+                <li v-for="(item,index) in list">
+
+                    <slot :info="item"></slot>
+                </li>
+            </ul>
+
+        `
+    })
+    vm.mount("#app")
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{msg}}
+        <hell></hell>
+    <hello></hello>
+</div>
+
+<script src="lib/vue-3.0.js"></script>
+<script>
+    //全局组件可以写在局部组件里面（全局组件的作用域是全局）
+    //局部组件不能写在全局组件里面（局部组件的作用域是创建局部组件的组件里面）
+    //组件命名两个单词一般使用-分割
+    //模板最外层一般只放一个标签
+
+    let vm = Vue.createApp({
+        data() {
+            return {
+                msg: '111',
+            }
+        },
+        //局部组件
+        components: {
+            "hello": {
+                data() {
+                    return {
+                        b: 22,
+                    }
+                },
+                template: '<div>{{b}}</div>'
+            },
+
+        }
+
+    });
+    //全局组件
+    vm.component('hell', {
+        data() {
+            return {
+                a: '222',
+            }
+        },
+
+        methods() {
+
+        },
+        template: '<span>{{a}}</span>',
+    })
+    vm.mount('#app')
+</script>
+</body>
+</html>

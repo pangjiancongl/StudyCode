@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- {{msg}} -->
+      <father></father>
+    </div>
+
+    <script src="lib/vue-3.0.js"></script>
+    <script>
+      let vm = Vue.createApp({});
+      //全局组件
+      vm.component("father", {
+        data() {
+          return {};
+        },
+        methods: {
+          fatherF(val) {
+            console.log("我是父组件的方法" + val);
+          },
+        },
+        template: `<span><son @father='fatherF' ></son></span>`,
+      });
+      vm.component("son", {
+        data() {
+          return {
+            msg: "我是子组件",
+          };
+        },
+
+        template: `<span><h4 @click="$emit('father',msg)">2222</h4></span>`,
+      });
+      vm.mount("#app");
+    </script>
+  </body>
+</html>

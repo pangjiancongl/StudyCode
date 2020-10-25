@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="lib/vue-3.0.js"></script>
+<div id="app">
+<toubu>
+<!--    给每个插槽添加内容v-slot:名字-->
+<!--    匿名插槽名字为default-->
+    <template v-slot:left>三</template>
+    <template v-slot:center><input type="text"></template>
+    <template v-slot:right><button>登录</button></template>
+</toubu>
+</div>
+<script>
+    let vm=Vue.createApp({
+        data(){
+            return{}
+        }
+
+    })
+    vm.component('toubu',{
+        //定义具名插槽name=‘名字’
+        template:`
+        <div>
+        <slot name="left"></slot>
+        <slot name="center"></slot>
+        <slot name="right"></slot>
+        </div>
+        `
+    })
+    vm.mount("#app")
+</script>
+</body>
+</html>
