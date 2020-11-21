@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58306755-0094-42c5-b949-cd184b6d5563" name="默认的" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1k7jOK2mccI1xbyoI0FqUHIzXnj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58306755-0094-42c5-b949-cd184b6d5563" name="默认的" comment="" />
+      <created>1605058492492</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605058492492</updated>
+      <workItem from="1605058494285" duration="1249000" />
+      <workItem from="1605060199756" duration="9000" />
+      <workItem from="1605138884072" duration="197000" />
+    </task>
+    <task id="LOCAL-00001" summary="happy-answer 项目 --composition API">
+      <created>1605058736226</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605058736226</updated>
+    </task>
+    <task id="LOCAL-00002" summary="vue_shop项目--day01--登录页面框架实现">
+      <created>1605138980487</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605138980487</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="happy-answer 项目 --composition API" />
+    <MESSAGE value="vue_shop项目--day01--登录页面框架实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="vue_shop项目--day01--登录页面框架实现" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="453" y="0" key="CommitChangelistDialog2" timestamp="1605138979297">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="453" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1605138979297" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1605060195612">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1605060195612" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1605138905397">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1605138905397" />
+    <state x="582" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605058693144">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="582" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1605058693144" />
+  </component>
+</project>
