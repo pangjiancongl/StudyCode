@@ -1,0 +1,7 @@
+<!-- 顶部搜索框 -->
+<view class="search_input">
+  <navigator url="/pages/search/index" open-type="navigate" class="search_text">
+    <text class="iconfont icon-fangdajing"></text>
+    <text decode="{{true}}">&nbsp;搜索</text>
+  </navigator>
+</view>
